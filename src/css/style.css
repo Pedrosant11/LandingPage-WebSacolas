@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+}
+
+.header .chamada .desconto h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}
+
+.header .chamada .desconto p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}
+
+.header .chamada .formulario form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario {
+    text-align: center;
+    margin: auto;
+    width: fit-content;
+}
+
+.formulario form .email-input{
+    padding: 15px 0 15px 20px;
+    margin-right: 15px;
+    width: 550px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.formulario form .cel-input {
+    padding: 15px 0 15px 20px;
+    margin-right: 15px;
+    width: 550px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.formulario form .email-submit {
+    background: #f1ffe7;
+    padding: 15px 15px;
+    width: 300px;
+    margin: 0 auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.formulario form .email-submit:hover {
+    background: #000000;
+    color: white;
+}
+
+.header .chamada .destaque h2{
+    margin-top: 20px;
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+}
+
+.header .chamada .destaque .destaque-azul {
+    color: #23718C;
+}
+
+.gradient {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(45deg, #000000, #23718C, #7f91ff, #1c4ef5);
+    background-size: 300% 400%;
+    animation: colors 15s ease infinite;
+  }
+  
+  @keyframes colors {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /*Filter styles*/
+  .saturate { filter: saturate(3); }
+  .grayscale { filter: grayscale(100%); }
+  .contrast { filter: contrast(160%); }
+  .brightness { filter: brightness(0.25); }
+  .blur { filter: blur(3px); }
+  .invert { filter: invert(100%); }
+  .sepia { filter: sepia(100%); }
+  .huerotate { filter: hue-rotate(180deg); }
+  .rss.opacity { filter: opacity(50%); }
