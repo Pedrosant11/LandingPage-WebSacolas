@@ -4,16 +4,26 @@ html {
     font-size: 62.5%;
 }
 
-body {
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
 .header {
     text-align: center;
+    position: relative;
 }
 
-.header .chamada .desconto h1{
+.header .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.header .header-container img {
+    height: 400px;
+}
+
+.header .header-container .chamada .desconto h1{
     font-family: 'Roboto', sans-serif;
     font-size: 5rem;
     text-transform: uppercase;
@@ -21,7 +31,7 @@ body {
     color: #fff;
 }
 
-.header .chamada .desconto p{
+.header .header-container .chamada .desconto p{
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -29,18 +39,18 @@ body {
     color: #fff;
 }
 
-.header .chamada .formulario form{
-    display: flex;
-    flex-direction: column;
-}
-
-.formulario {
+.header .header-container .chamada .formulario {
     text-align: center;
     margin: auto;
     width: fit-content;
 }
 
-.formulario form .email-input{
+.header .header-container .chamada .formulario form{
+    display: flex;
+    flex-direction: column;
+}
+
+.header .header-container .chamada .formulario form .email-input{
     padding: 15px 0 15px 20px;
     margin-right: 15px;
     width: 550px;
@@ -53,7 +63,7 @@ body {
     font-weight: 500;
 }
 
-.formulario form .cel-input {
+.header .header-container .chamada .formulario form .cel-input {
     padding: 15px 0 15px 20px;
     margin-right: 15px;
     width: 550px;
@@ -65,7 +75,7 @@ body {
     font-weight: 500;
 }
 
-.formulario form .email-submit {
+.header .header-container .chamada .formulario form .email-submit {
     background: #f1ffe7;
     padding: 15px 15px;
     width: 300px;
@@ -76,16 +86,18 @@ body {
     color: black;
     font-size: 1.5rem;
     font-weight: 500;
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
     border-radius: 10px;
+    border: none;
+    cursor: pointer;
 }
 
-.formulario form .email-submit:hover {
+.header .header-container .chamada .formulario form .email-submit:hover {
     background: #000000;
     color: white;
 }
 
-.header .chamada .destaque h2{
+.header .header-container .chamada .destaque h2{
     margin-top: 20px;
     font-size: 3rem;
     font-family: 'Roboto', sans-serif;
@@ -94,14 +106,100 @@ body {
     color: #fff;
 }
 
-.header .chamada .destaque .destaque-azul {
+.header .header-container .chamada .destaque .destaque-azul {
     color: #23718C;
+}
+
+.header:after {
+    content: url('../images/seta_preta.png');
+    position: absolute;
+    height: 35px;
+    bottom: 40px;
+    animation: downarrow 0.6s infinite alternate ease-in-out;
+}
+
+@-webkit-keyframes downarrow {
+    0% { -webkit-transform: translateY(0) ; 
+    opacity: 0.4;}
+    100% { -webkit-transform: translateY(0.4em); 
+    opacity: 0.9; }
+}
+
+@media (max-width: 1200px) {
+    .header .header-container {
+        padding-top: 0px;
+    }
+}
+
+.main .porque {
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main .porque .titulo{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.main .porque .porques {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    gap: 50px;
+}
+
+.main .porque .porques .motivos {
+    font-size: 2.5rem;
+    width: 300px;
+    align-items: center;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.2s ease-in-out;
+}
+
+.main .porque .porques .motivos:hover {
+    transform: scale(1.2);
+    background: #154352;
+}
+
+.main .porque .porques .motivos .numeracao{
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+}
+
+.footer .infos {
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px 0 20px;
+}
+
+.footer .infos .copy,
+.footer .infos .criador,
+.footer .infos .criador a {
+    color: white;
+    font-size: 1.3rem;
 }
 
 .gradient {
     height: 100vh;
-    width: 100vw;
-    background: linear-gradient(45deg, #000000, #23718C, #7f91ff, #1c4ef5);
+    background: linear-gradient(45deg, #000000, #154352, #181F2A);
     background-size: 300% 400%;
     animation: colors 15s ease infinite;
   }
